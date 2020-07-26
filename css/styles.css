@@ -1,0 +1,267 @@
+/* colours */
+:root{
+    --primary: #f5f5f5;
+    --secondary:#f4c0fd;
+    --title: #ba68c8;
+  }
+  
+  html,body{
+    min-height:100vh;
+    min-width:100vw;
+    overflow-x: hidden;
+  }
+  /* layout styles */
+  nav{
+    background: var(--primary);
+    border-bottom: 10px solid var(--title);
+  }
+  nav a{
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+  nav a span{
+    font-weight: bold;
+  }
+  nav .sidenav-trigger{
+    margin-left: 10;
+  }
+  
+  /* dream styles */
+  .dreams{
+    margin: 20px 10px 10px 10px;
+  }
+  
+    .fav-dreams{
+      margin: 20px 10px 10px 10px;
+    }
+  .card-panel.dream{
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 1px 3px rgba(90,90,90,0.1);
+    display: flex;
+    direction: row;
+    position: relative;
+}
+  .dream img{
+    grid-area: image;
+    max-width: 60px;
+  }
+  .dream-details{
+    margin-top: 6px;
+    margin-left: 15px;
+    width:40%;
+  }
+  .actions{
+    grid-area: delete;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 18px;
+    right:10px;
+  display: flex;
+  flex-direction: row;
+  }
+  .dream-see{
+    margin-right: 8px;
+  }
+
+
+
+.dream-fav{
+  margin-right: 10px;
+  z-index: 99;
+}
+.dream-delete{
+  z-index:99;
+}
+
+.dream-type{
+    position: absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    border-top: 40px solid #ccc;
+    border-left: 40px solid transparent;
+    border-bottom:80px solid transparent;
+}
+
+.image-container{
+  width:70px;
+  height:70px;
+}
+.image-container img{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+  .dream-title{
+    font-weight: bold;
+  }
+  .dream-summary{
+    font-size: 0.8em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* form-styles */
+  .add-btn{
+    background: var(--title) !important;
+  }
+  input{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+  .side-form button{
+    background: var(--title);
+    box-shadow: 1px 1px 3px rgba(90,90,90,0.2);
+  }
+  form .input-field{
+    margin-top: 30px;
+  }
+
+  footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    margin: 20px;
+  }
+/* 
+  /* addbar */
+  .form{
+    background:white;
+    padding-top:15px;
+    border-radius: 10px;
+  }
+  .addBarMain{
+    margin:10px;
+  }
+  .input-field{
+    margin-top: 10px !important;
+  }
+  .title{
+    margin-bottom: 10px ;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #ba68c8 !important;
+}
+/* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #ba68c8 !important;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+   /* label focus color */
+   .input-field textarea:focus + label {
+    color: #ba68c8 !important;
+}
+/* label underline focus color */
+  .input-field textarea:focus {
+    border-bottom: 1px solid #ba68c8 !important;
+  } 
+
+
+  /* //carousel */
+  .carousel{
+    width: 90%;
+    margin: auto;
+    height:320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .carousel .carousel-item{
+    background:var(--secondary);
+    width:220px !important;
+    height:220px !important;
+  }
+  .selected-image-container{
+    background:var(--secondary);
+    width:220px !important;
+    height:220px !important;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom:20px;
+  
+  }
+  .dream-expand{
+    padding:10px;
+  }
+  .selected-title{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .selected-card{
+    padding:10px;
+  }
+  .selected-details{
+    font-size: 1.3rem;
+    display: block;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .carousel-item img  {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .selected-image-container img  {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .carousel-item h6{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+  .dream-type-title h3{
+    margin:0;
+    text-align: center;
+    color:rgb(161, 159, 159);
+  }
+  .sensual{
+    border-top: 40px solid #f44336;
+  }
+  .happy{
+    border-top: 40px solid #2196f3;
+  }
+  .sad{
+    border-top: 40px solid #8bc34a;
+  }
+  .scary{
+    border-top: 40px solid #607d8b;
+  }
+  .addDream-footer{
+    width:100%;
+    margin:0 ;
+    position: relative;
+  }
+  .addDream-footer button{
+    width:90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+  .addDream-footer button i{
+    font-size:2rem;
+    font-weight: bolder;
+  }
+
+  .selected-image{
+    background-color: #9c27b0 !important;
+  }
+  .fill-heart{
+    color:red;
+  }

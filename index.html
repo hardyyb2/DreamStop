@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This website provides you a diary to write your dreams and save them up till eternity" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamStop</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body class="grey lighten-4">
+
+    <!-- navbar -->
+    <nav class="purple lighten-2">
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view purple">
+                    <div>
+                        <a class="flow-text" href="/">DreamStop</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect" href="/pages/favs.html"><i class="material-icons">grade</i>Favorites</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect" href="/pages/addDream.html"><i class="material-icons">create</i>Write</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+        </ul>
+
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+
+    <!-- main cards  -->
+    <main class="dreams">
+    </main>
+
+    <!-- add button bottom -->
+    <footer>
+        <a class="btn-floating btn-large waves-effect waves-light purple lighten-1" href="/pages/addDream.html"><i
+                class="material-icons">create</i></a>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCBQTv0JVUPAk1pFtx-9Xvco2K9JFMhYAc",
+            authDomain: "dreamstop-de8b9.firebaseapp.com",
+            databaseURL: "https://dreamstop-de8b9.firebaseio.com",
+            projectId: "dreamstop-de8b9",
+            storageBucket: "dreamstop-de8b9.appspot.com",
+            messagingSenderId: "664980097957",
+            appId: "1:664980097957:web:f508655c873004c666364c"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore()
+    </script>
+    <script src="/js/materialize.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

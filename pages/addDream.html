@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This website provides you a diary to write your dreams and save them up till eternity" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamStop</title>
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="grey lighten-4">
+    <!-- navbar -->
+    <nav class="purple lighten-2">
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view purple">
+                    <div>
+                        <a class="flow-text" href="/">DreamStop</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect" href="/favs.html"><i class="material-icons">grade</i>Favorites</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="waves-effect"><i class="material-icons">create</i>Write</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+        </ul>
+
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+
+    <!-- main -->
+    <main class="addBarMain">
+        <div class="dream-type-title">
+            <h3>My Dream </h3>
+            <div class="carousel">
+                <a class="carousel-item selected-image">
+                    <span class="dream-type happy"></span>
+                    <h6>Happy</h6>
+                    <img src="/images/happy.svg" alt="happy">
+                </a>
+                <a class="carousel-item">
+                    <span class="dream-type sad"></span>
+                    <h6>Sad</h6>
+                    <img src="/images/sad.svg" alt="sad">
+                </a>
+                <a class="carousel-item">
+                    <span class="dream-type scary"></span>
+                    <h6>Scary</h6>
+                    <img src="/images/scary.svg" alt="scary">
+                </a>
+                <a class="carousel-item">
+                    <span class="dream-type sensual"></span>
+                    <h6>Sensual</h6>
+                    <img src="/images/sensual.svg" alt="sensual">
+                </a>
+            </div>
+        </div>
+
+        <div class="form card">
+            <div class="dream-type dream-desc"></div>
+            <div class="row">
+                <form autocomplete="off" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 title">
+                            <input id="input_text" class="validate" type="text" data-length="30" maxlength="30"
+                                name="title">
+                            <label for="input_text" data-error="Please fill out the title">Title</label>
+                            <span class="helper-text" data-error="Please Enter the title" data-success="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 details">
+                            <textarea id="textarea2" class="materialize-textarea" data-length="300" maxlength="300"
+                                name="details"></textarea>
+                            <label for="textarea2">Details</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="addDream-footer">
+        <button class="btn-large waves-effect waves-light purple" type="submit" id="submitbutton"
+            name="action">Save&nbsp;
+            <i class="material-icons">save</i>
+        </button>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCBQTv0JVUPAk1pFtx-9Xvco2K9JFMhYAc",
+            authDomain: "dreamstop-de8b9.firebaseapp.com",
+            databaseURL: "https://dreamstop-de8b9.firebaseio.com",
+            projectId: "dreamstop-de8b9",
+            storageBucket: "dreamstop-de8b9.appspot.com",
+            messagingSenderId: "664980097957",
+            appId: "1:664980097957:web:f508655c873004c666364c"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore()
+    </script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/adddream.js"></script>
+
+</body>
+
+</html>
